@@ -3,7 +3,7 @@ import { createStore } from 'vuex'
 export default createStore({
   state: {
     vinilos: {
-      rap:[
+      rap: [
         {
           id: 1,
           artist: "Tupac",
@@ -40,7 +40,7 @@ export default createStore({
           image: "https://musiclife.cl/2181-superlarge_default/eminem-the-marshall-mathers-lp.webp"
         }
       ],
-      pop:[
+      pop: [
         {
           id: 6,
           artist: "Michel Jackson",
@@ -117,11 +117,17 @@ export default createStore({
     }
   },
   getters: {
+    getTotalAlbumes: state => {
+      return state.vinilos.rap.length + state.vinilos.pop.length + state.vinilos.rock.length
+    },
     getVinilosRap: state => state.vinilos.rap,
     getVinilosPop: state => state.vinilos.pop,
     getVinilosRock: state => state.vinilos.rock
   },
   mutations: {
+    agregarAlbum(state, nuevoAlbum) {
+      state.vinilos[nuevoAlbum.category].push(nuevoAlbum)
+    }
   },
   actions: {
   },
