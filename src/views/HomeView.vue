@@ -1,6 +1,7 @@
 <template>
 <div class="home-view">
     <BannerItem />
+    <br>
     <p>Total de álbumes: {{ getTotalAlbumes }}</p>
     <div class="botones-categoria">
         <button @click="irACategoria('rap')">Rap ({{ getVinilosRap.length }})</button>

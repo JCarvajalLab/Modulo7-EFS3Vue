@@ -7,19 +7,19 @@
         <div class="form-row">
             <div class="form-group">
                 <label for="artista">Artista:</label>
-                <input type="text" id="artista" v-model="artista">
+                <input type="text" id="artista" v-model="artista" required>
             </div>
             <div class="form-group">
                 <label for="album">Álbum:</label>
-                <input type="text" id="album" v-model="album">
+                <input type="text" id="album" v-model="album" required>
             </div>
             <div class="form-group">
                 <label for="imagen">Imagen:</label>
-                <input type="text" id="imagen" v-model="imagen">
+                <input type="text" id="imagen" v-model="imagen" required>
             </div>
             <div class="form-group">
                 <label for="genero">Género:</label>
-                <select id="genero" v-model="genero">
+                <select id="genero" v-model="genero" required>
                     <option value="rap">Rap</option>
                     <option value="pop">Pop</option>
                     <option value="rock">Rock</option>
